@@ -1,0 +1,42 @@
+name: RPP
+description: A new Flutter project
+
+# The following line prevents the package from being accidentally published to pub.dev
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  animated_text_kit: ^4.2.1
+  easy_sidemenu: ^0.6.0
+  flutter_side_menu: ^0.5.3
+  salomon_bottom_bar: ^3.3.2
+  flutter_launcher_icons: ^0.13.1
+  remixicon: ^1.2.0
+  # Add your dependencies here
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_native_splash: ^2.0.1+1
+
+flutter_native_splash:
+  color: "#42a5f5" # Background color for the splash screen
+  image: assets/splash.png # Path to your splash image
+  android: true # Enable Android splash screen
+  ios: true # Enable iOS splash screen
+  web: true # Enable Web splash screen
+  android_gravity: center # Center the splash image on Android
+  ios_content_mode: scaleAspectFill # Scale the splash image on iOS
+  web_image_mode: scale # Scale the splash image on Web
+  fullscreen: true # Enable fullscreen mode
+
+flutter:
+  assets:
+    - assets/rpp.png
