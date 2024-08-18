@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:remixicon/remixicon.dart';
-
+import 'package:carousel_slider/carousel_slider.dart';
+import './members.dart';
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -111,7 +113,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   var _currentIndex = 0;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
+  final List<Member> members = [
+    Member(
+        name: 'John Doe',
+        position: 'President',
+        number: '123-456-7890',
+        imageUrl: 'https://via.placeholder.com/150'),
+    Member(
+        name: 'Jane Smith',
+        position: 'Vice President',
+        number: '987-654-3210',
+        imageUrl: 'https://via.placeholder.com/150'),
+    // Add more members here...
+  ];
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -539,11 +553,36 @@ Container(
       
     ],
   ),
-)
+),
+ Container(
+ 
+   decoration: BoxDecoration(
+        color: Color.fromARGB(250, 204, 44, 100), // Background color of the box
+        borderRadius: BorderRadius.circular(20), // Rounded corners
+      ),
+  child:Column(
+children: [
+ Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'AALLU',
+            style: TextStyle(
+              color: Colors.white, // Text color
+              fontSize: 18, // Text size
+              fontWeight: FontWeight.bold, // Text weight
+            ),
+          ),
+          Icon(
+            Icons.person, // Icon on the right
+            color: Colors.white,
+          ),
+        ],
+      ),
+],
 
-
-
-
+  )
+ )
             ],
           ),
         ),
@@ -552,6 +591,7 @@ Container(
       
     );
   }
+  
   Widget _drawer() => Drawer(
     child: Container(
       color: Colors.white,
@@ -604,6 +644,7 @@ Container(
   );
 
 }
+
 final List<String> _menuItems = <String>[
   'घर',
   'दल',
